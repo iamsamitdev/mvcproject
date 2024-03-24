@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Rewrite rule for user controller
+RewriteRule ^User/([^/]+)$ index.php?controller=User&action=$1 [L]
+
+# Rewrite rule for User controller actions
+RewriteRule ^User/([^/]+)/([^/]+)$ index.php?controller=User&action=$1&id=$2 [L]
